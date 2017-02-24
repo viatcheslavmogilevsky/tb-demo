@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>OpenTok Hello World</title>
+    <script src="//static.opentok.com/webrtc/v2.2/js/TB.min.js"></script>
+    <script type="text/javascript">
+        var apiKey = '<%= api_key %>';
+        var sessionId = '<%= session_id %>';
+        var token = '<%= token %>';
+    </script>
+    <script src="/js/demo.js"></script>
+</head>
+<body>
+    <h2>Welcome to the <%= session_id[0..30] %>... room!</h2>
+    <div style="width: 500px; word-wrap:break-word;">
+        <h3>Your token:</h3>
+        <p><%= token %></p>
+    </div>
+
+    <h3>Publisher screen:</h3>
+    <div id="publisher"></div>
+
+    <h3>Subcribers:</h3>
+    <div id="subscribers"></div>
+</body>
+</html>
