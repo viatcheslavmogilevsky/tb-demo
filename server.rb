@@ -5,7 +5,7 @@ if !ENV.has_key?("TB_API_KEY") || !ENV.has_key?("TB_API_SECRET")
   raise "You must define TB_API_KEY and TB_API_SECRET environment variables"
 end
 
-class HelloWorld < Sinatra::Base
+class TBDemo < Sinatra::Base
 
   set :api_key, ENV['TB_API_KEY']
   set :opentok, OpenTok::OpenTok.new(api_key, ENV['TB_API_SECRET'])
@@ -23,7 +23,4 @@ class HelloWorld < Sinatra::Base
       :token => token
     }
   end
-
-  # start the server if ruby file executed directly
-  run! if app_file == $0
 end
